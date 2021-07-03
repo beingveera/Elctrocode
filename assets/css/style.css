@@ -1,3 +1,95 @@
+.imgs{
+      margin: 0 auto;
+      height: auto;
+      max-width: 100%;
+      border: none;
+      display: block;
+      padding: 5px 0;
+}
+
+
+
+
+
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: .5px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  color: #000061;
+  font-weight: bold;
+  outline: none;
+}
+
+input:hover{
+  text-decoration: none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+
+}
+
+
+.btns{
+  border: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color:#3498db;
+  border-radius: 5px;
+}
+
+.btns:hover{
+  background-color: white;
+  color: #3498db ;
+  box-shadow: .5px .5px .5px gray;
+  font-weight: bold;
+
+}
+
+.badge{
+  margin-bottom: 0px;
+  margin-left: -100px;
+  margin-top: -30px;
+  background-color:#3498db;
+  color: red;
+  cursor: pointer;
+}
+
+.begde:hover{
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body {
   font-family: "Open Sans", sans-serif;

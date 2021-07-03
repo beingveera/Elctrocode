@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,97 +26,14 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <script>
-    function magnify(imgID, zoom) {
-     var img, glass, w, h, bw;
-     img = document.getElementById(imgID);
-   
-     /* Create magnifier glass: */
-     glass = document.createElement("DIV");
-     glass.setAttribute("class", "img-magnifier-glass");
-   
-     /* Insert magnifier glass: */
-     img.parentElement.insertBefore(glass, img);
-   
-     /* Set background properties for the magnifier glass: */
-     glass.style.backgroundImage = "url('" + img.src + "')";
-     glass.style.backgroundRepeat = "no-repeat";
-     glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-     bw = 3;
-     w = glass.offsetWidth / 2;
-     h = glass.offsetHeight / 2;
-   
-     /* Execute a function when someone moves the magnifier glass over the image: */
-     glass.addEventListener("mousemove", moveMagnifier);
-     img.addEventListener("mousemove", moveMagnifier);
-   
-     /*and also for touch screens:*/
-     glass.addEventListener("touchmove", moveMagnifier);
-     img.addEventListener("touchmove", moveMagnifier);
-     function moveMagnifier(e) {
-       var pos, x, y;
-       /* Prevent any other actions that may occur when moving over the image */
-       e.preventDefault();
-       /* Get the cursor's x and y positions: */
-       pos = getCursorPos(e);
-       x = pos.x;
-       y = pos.y;
-       /* Prevent the magnifier glass from being positioned outside the image: */
-       if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-       if (x < w / zoom) {x = w / zoom;}
-       if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-       if (y < h / zoom) {y = h / zoom;}
-       /* Set the position of the magnifier glass: */
-       glass.style.left = (x - w) + "px";
-       glass.style.top = (y - h) + "px";
-       /* Display what the magnifier glass "sees": */
-       glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-     }
-   
-     function getCursorPos(e) {
-       var a, x = 0, y = 0;
-       e = e || window.event;
-       /* Get the x and y positions of the image: */
-       a = img.getBoundingClientRect();
-       /* Calculate the cursor's x and y coordinates, relative to the image: */
-       x = e.pageX - a.left;
-       y = e.pageY - a.top;
-       /* Consider any page scrolling: */
-       x = x - window.pageXOffset;
-       y = y - window.pageYOffset;
-       return {x : x, y : y};
-     }
-   }
-   
-   </script>
+  
 
 
-  <style>
-  .responsive {
-    width: 100%;
-    height: auto;
-    }
-
-    * {box-sizing: border-box;}
-
-.img-magnifier-container {
-  position: relative;
-}
-
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 50%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 100px;
-  height: 100px;
-}
-
-  </style>
 
 </head>
 
@@ -151,64 +68,193 @@
 
 
   <section id="about" class="about">
-    <a class="getstarted scrollto" style="text-align: center;"><h4 style="text-align: center;"><b><u>Smart Intravanous Stand</u></b></h4></a>
+    <h4 style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;"><span id="typed"></span></h4>
         <br><br>
     <div class="container">
 
-      <div class="row content">
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
-          <h4 style="color:dodgerblue;"><u><b>Introduction</b></u> :- </h4>
-          <p>Intravenous poles are those healthcare ancillary implements that aid
-            in holding and distributing medications to patients through intravenous injections. Intravenous infusion 
-            relies on the weight of the Intravenous tubing fluid. Perpetual follow-up of the intravenous bag is required
-             to supersede the fluid when vacated. Also, mobilization of the intravenous pole is required from patients 
-             and nurses.This leads to discomfort and inconvenience for both patients and hospital staff.</p><br>
-        
-             <h4 style="color:dodgerblue;"><u><b>Problems Statements</b></u> :- </h4>
-             <p>In hospitals, We saw that when the fluid inside the drip becomes completely empty  and the doctors/nurses
-             could not reach the patient timely to remove the needle from the veins , the pressure inside the veins 
-             overcomes the  pressure inside the IV, allowing the blood to flow back into the line which is not desired.</p><br>
+      <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-            <!--<img src="/Users/techno/Desktop/public (2)/public/assets/img/team/manoj1.JPG" alt="Nature" class="responsive">
-            --> 
-             <div class="img-magnifier-container">
-              <img id="myimage" class="responsive" src="/Users/techno/Desktop/public (2)/public/assets/img/team/manoj1.JPG" width="500" height="400" alt="Girl">
-            </div>
-
-             <h4 style="color:dodgerblue;"><u><b>Conclusion</b></u> :- </h4>
-             <p>Robotic Smart IV Stand was developed, and successfully used in Geetanjali Medical Hospital. When the 
-               system started, it gives glow to the green LED’s, ensuring that the veins are being infused with the 
-               fluid. When the drip solution is about to end, it gives a alert 	message to the doctor/nurse on the 
-               phone through node MCU. We can also check the system update on Android mobile Application and the red
-                LED’s indicate that drip solution 	is critically low. So that they can reach the patient timely
-                 to avoid the backflow of the bloodThe capability of the novel robot to hold a weight up to 20 kg
-                  while maintained balanced. The Smart IV Stand is used in the Hospitals, Army Medical Camps,
-                   Medical Dispensary, etc.</p><br>
-
-               <h4 style="color:dodgerblue;"><u><b>Future Implementations</b></u> :- </h4>
-               <p>Sound Module is used which will alert Nursing staff as well as family members as per the 
-                 voice command issued by patient.​</p><br>
-            
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-container"  style="padding: 20px;">
+          <h4  style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;">Components</h4>
+            <a class="btns">Computer</a>
+            <a class="btns">Programming</a>
+            <a class="btns">Graphics</a>
+            <a class="btns">Cloud Computing</a>
+            <a class="btns">Machine Learning</a>
+            <a class="btns">Internet of Things</a>
+            <a class="btns">Computer Vission</a>
+            <a class="btns">Automation</a>
+            <a class="btns">Web Development<a>
+            <a class="btns">Block Chain</a>
+            <a class="btns">Android</a>
+            <a class="btns">Devops</a>
+          <br>
         </div>
-        <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-          <h4 style="color:dodgerblue;"><u><b>Existing IV Stands</b></u> :- </h4>
-             <p>Here in we have provided an overview of the IV poles that exists today in both developed and non-developed
-             countries.Their shape is  subtle and have limited features. With time, most of them cannot even bear the
-              weight of the bags . Moreover , they don’t have any alert system which could tell the nursing staff about
-               the emptied IV drip solution which often leads to blood backflow.</p><br>
+      </div><br>
 
-               <h4 style="color:dodgerblue;"><u><b>Methdology</b></u> :- </h4>
-               <p>We have first develop a IV Stand according to our requirement. Then, We have designed a system 
-                 Robotic Smart IV Stand based on IOT & Sensors. The system started, When the IV fluid bottle is 
-                 hanged  to the hook which is connected with the sensor then it gives glow to the green LED’s, 
-                 ensuring that the veins are being infused with the fluid. When the drip solution is about to end, 
-                 it gives a alert message to the doctor/nurse on the phone. </p>
-                
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-container" style="padding-top:10px;">
+          <h4  style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;">Uses</h4>
+              <ol class="list-group list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none;color: #3c1d78;">Development</a></div>
+                  Cras justo odio
+                  </div>
+                <span class="badge">1</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none; color: #3c1d78;">Blogs</a></div>
+                  Cras justo odio
+                </div>
+                <span class="badge">1</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none; color: #3c1d78;">Projects</a></div>
+                  Cras justo odio
+                </div>
+                <span class="badge">1</span>
+              </li>
+
+               <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none; color: #3c1d78;">Programming</a></div>
+                  Cras justo odio
+                </div>
+                <span class="badge">11</span>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none; color: #3c1d78;">Ideas</a></div>
+                  Cras justo odio
+                </div>
+                <span class="badge">11</span>
+              </li>
+
+               <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><a href="" style="text-decoration: none; color: #3c1d78;">Technology</a></div>
+                  Cras justo odio
+                </div>
+                <span class="badge">11</span>
+              </li>
+            </ol>
+          <br>
+        </div>
+      </div><br>
+
+       <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-container" style="padding:10px 10px;color: #000061;">
+           <h4  style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;">Project Image</h4>
+           <img src="https://source.unsplash.com/user/erondu/300x300" class="imgs" style="padding-left:15px;padding-right:20px;">
+        </div>
+      </div><br>
+
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <div class="w3-container" style="padding-left:10px;">
+         <h4  style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;">Objective</h4>
+        <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
         </div>
       </div>
 
+      <div class="w3-container w3-card w3-white">
+        <h4 style="padding: 10px;text-align: center;font-weight: bold;color:#3c1d78;text-shadow: .5px .5px .5px gray;">Working</h4>
+         <ol class="list-group list-group-numbered" style="padding-bottom: 15px;">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><p style="text-decoration: none;color: #3c1d78;text-align: center;">Development</p></div>
+                  <div style="text-align: left"><p style="color: gray;">A blog is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. It is a platform where a writer or a group of writers share their views on an individual subject.<p></div>
+                  </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><p style="text-decoration: none;color: #3c1d78;text-align: center;">Development</p></div>
+                  <div style="text-align: left"><p style="color: gray;">A blog is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. It is a platform where a writer or a group of writers share their views on an individual subject.<p></div>
+                  </div>
+                  </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><p style="text-decoration: none;color: #3c1d78;text-align: center;">Development</p></div>
+                  <div style="text-align: left"><p style="color: gray;">A blog is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. It is a platform where a writer or a group of writers share their views on an individual subject.<p></div>
+                  </div>
+                  </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><p style="text-decoration: none;color: #3c1d78;text-align: center;">Development</p></div>
+                  <div style="text-align: left"><p style="color: gray;">A blog is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. It is a platform where a writer or a group of writers share their views on an individual subject.<p></div>
+                  </div>
+                   </li>
+
+            </ol> 
+
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+     
+
     </div>
   </section>
+
+   <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>ElectroCode</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="#team">Team ElectroCode</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#hero" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a class="scrollto" href="#services">Services</a>
+            <a class="scrollto" href="#team">Team</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -226,11 +272,22 @@
   <script src="assets/js/main.js"></script>
 
 
-<script>
-    /* Execute the magnify function: */
-    magnify("myimage", 3);
-    /* Specify the id of the image, and the strength of the magnifier glass: */
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async defer></script>
+  <script>
+      window.onload = function () {
+          console.log("loaded")
+          var typed = new Typed('#typed', {
+              strings: ["Smart Green House Effect"],
+              backSpeed: 20,
+              smartBackspace: true,
+              backDelay: 1200,
+              startDelay: 1000,
+              typeSpeed: 25,
+              loop: true,
+          });
+      };
+  </script>
+
 
 
 
